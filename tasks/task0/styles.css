@@ -1,0 +1,11 @@
+.circle1, .circle2, .circle3, .circle4, .circle5, .circle6 {
+  height: 100px;
+  width: 100px;
+  border-radius: 80%;
+}
+.circle1 { background-color: red}
+.circle2 { background-color: blue}
+.circle3 { background-color: yellow}
+.circle4 { background-color: purple}
+.circle5 { background-color: green}
+.circle6 { background-color: orange}
