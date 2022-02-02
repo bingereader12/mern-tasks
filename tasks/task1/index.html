@@ -6,11 +6,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
+       
+        <div align ="center"> 
+            <form>
+			<div  id="box" >
+                <h1>
+                LOGIN
+                <br>
+                <br>
+				<input type="email" placeholder="Enter Email" id="getemail" name="email" required >
+                <br>
+                <br>
+				<input type="password" placeholder="Enter Password" id="getpass" name="psw" required>
+                <br>
+                </h1>
+                <br>
+                <button class="btn" type="submit" onclick="getvalue();">Login!</button>
+                <br>
+                <h2><a href="https://www.kjscecodecell.com/" target="_blank">Go To Codecell Page!</a></h2>  
+			</div>
+                                  
+        </form>
+        </div>
+   
+        <script>
+            let message ="You have Logged In !!!"
+            const details= [];
+            let error1 = "Enter Correct Email!!"
+            let error2 = "Enter A Value!"
+            function validateEmail(email) 
+               {
+                   var re = /\S+@\S+\.\S+/;
+                   return re.test(email);
+               }
+            
+                
+            
+            function getvalue(){
+                details.push(document.getElementById("getemail").value,document.getElementById("getpass").value)
+                
+                
+                console.log(JSON.stringify(details));
     
-    <script type="text/javascript">
+                if (document.getElementById("getemail").value !== "" && document.getElementById("getpass").value !== "" && validateEmail(document.getElementById("getemail").value) == true) {
+                    alert(message);
+
+                
+            }
+               else if (document.getElementById("getemail").value !== "" && document.getElementById("getpass").value !== "" && validateEmail(document.getElementById("getemail").value) == false){
+                   alert(error1)
+               }
         
-    </script>
+            else {
+                alert(error2);
+            }
+        }
+
+        </script>
 </body>
 </html>
